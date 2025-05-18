@@ -2,6 +2,10 @@
 
 ![All Projects](./src/assets/screen-shots/all-projects.png)
 
+## Live preview
+
+Click [here](https://new-project-hub.netlify.app/projects) to visit the live preview of ProjectHub
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.9.
 
 ## Development server
