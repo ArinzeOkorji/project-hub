@@ -6,6 +6,20 @@
 
 Click [here](https://new-project-hub.netlify.app/projects) to visit the live preview of ProjectHub
 
+## Overview
+
+This project built using
+    - Angular v19,
+    - Angular Material (main UI library)
+    - Bootstrap (supporting UI library. Used mainly fot its utility classes such as d-flex, row, margin & paddings etc).
+    - In-memory-web-api for mock RESTful features. Used because it is well suited for angular.
+
+Considering this version of angular by default uses standalone components, there are no modules in this app. However, all routed components are lazy-loaded.
+
+Angular Material's drag-drop cdk handles task status updates.
+
+All projects/tasks you create are stored in the device's local storage. This ensures persisitence of data.
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.9.
 
 ## Development server
