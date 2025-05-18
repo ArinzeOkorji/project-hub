@@ -9,10 +9,10 @@ Click [here](https://new-project-hub.netlify.app/projects) to visit the live pre
 ## Overview
 
 This project built using
-    * Angular v19.
-    * Angular Material (main UI library).
-    * Bootstrap (supporting UI library. Used mainly fot its utility classes such as d*flex, row, margin & paddings etc).
-    * In-memory-web-api for mock RESTful features. Used because it is well suited for angular.
+- Angular v19.
+- Angular Material (main UI library).
+- Bootstrap (supporting UI library. Used mainly fot its utility classes such as d-flex, row, margin & paddings etc).
+- In-memory-web-api for mock RESTful features. Used because it is well suited for angular.
 
 Considering this version of angular by default uses standalone components, there are no modules in this app. However, all routed components are lazy-loaded.
 
