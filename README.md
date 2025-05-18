@@ -8,7 +8,7 @@ Click [here](https://new-project-hub.netlify.app/projects) to visit the live pre
 
 ## Overview
 
-This project built using
+This project was built using
 - Angular v19.
 - Angular Material (main UI library).
 - Bootstrap (supporting UI library. Used mainly for its utility classes such as d-flex, row, margin & paddings etc).
