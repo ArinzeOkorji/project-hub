@@ -1,0 +1,46 @@
+<div class="container mb-5">
+    <div>
+        <mat-icon class="pointer float-start"  (click)="goBack()">arrow_back</mat-icon>
+    </div>
+    <div class="text-center my-4 w-75 mx-auto">
+        <h2 class="">{{project?.name}}</h2>
+        <div class="small">{{project?.dateCreated | date:'mediumDate'}}</div>
+        <div class="mt-3">{{project?.description}}</div>
+    </div>
+
+    <mat-card class="mt-5" appearance="outlined">
+        <mat-card-content>
+            <div class="d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Tasks</h5>
+                <button mat-flat-button (click)="createTask()">Add Task <mat-icon>add</mat-icon></button>
+            </div>
+
+            <div class="mt-3">
+                <div cdkDropListGroup class="d-flex flex-column flex-md-row justify-content-between gap-5 gap-md-3">
+                    <!-- All lists in here will be connected. -->
+                    @for (taskGroup of taskStatusGroups; track taskGroup) {
+                        <mat-card class="w-100" appearance="outlined">
+                            <mat-card-header class="fw-bold">{{taskGroup.name}}</mat-card-header>
+                            <mat-card-content  class="flex-grow-1 bg-body-secondary pt-3">
+                                <div cdkDropList 
+                                (cdkDropListDropped)="drop($event)"
+                                [cdkDropListData]="taskGroup.tasks"
+                                [id]="taskGroup.name"
+                                class="h-100"
+                                cdkDropListOrientation="mixed"
+                                >
+                                    @for (task of taskGroup.tasks; track task) {
+                                        <div cdkDrag class="drag-item" [id]="task.id" [cdkDragData]="task" (click)="viewTaskDetails(task.id)">
+                                            {{task.name}}
+                                        </div>
+                                    }
+                                  </div>
+                            </mat-card-content>
+                        </mat-card>
+                      
+                    }
+                  </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

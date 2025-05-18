@@ -1,0 +1,24 @@
+@if (task) {
+    
+<mat-dialog-content class="mat-typography text-center">
+    <div>
+        <h1>{{task.name}}</h1>
+        <div class="small">{{task.dateCreated | date:'mediumDate'}}</div>
+    </div>
+
+    <div class="mt-4">
+        <p>{{task.description}}</p>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions class="d-flex justify-content-between">
+    <button mat-button mat-dialog-close>Close</button>
+    <div>
+        <button mat-button class="danger" (click)="deleteTask()">Delete <mat-icon>delete</mat-icon></button>
+  <button mat-flat-button cdkFocusInitial (click)="editTask()">Edit <mat-icon>edit</mat-icon></button>
+    </div>
+</mat-dialog-actions>
+} @else {
+    <div class="d-flex align-items-center w-100 justify-content-center h-100">
+        <mat-spinner></mat-spinner>
+    </div>
+}

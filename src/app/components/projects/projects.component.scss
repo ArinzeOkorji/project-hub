@@ -1,0 +1,11 @@
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+
+    table {
+        @media screen and (max-width: 768px) {
+            width: 230%;
+            
+        }
+    }
+}
